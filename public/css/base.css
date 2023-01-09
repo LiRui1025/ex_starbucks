@@ -1,0 +1,153 @@
+@media (min-width: 991px) {
+    .left > div {
+        position: fixed;
+        top: 0;
+    }
+    .left .left-bootom{
+        margin-top:10rem;
+    }
+}
+@media (max-width: 991px) {
+    .left > div {
+        position:relative;
+    }
+    .left .left-bootom{
+        margin:1rem;
+        text-align: left;
+    }
+}
+
+
+.navbar {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.navbar-nav {
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    align-items: center;
+}
+.navbar-nav .nav-link {
+    padding-right: 0.8rem;
+    padding-left: 0.8rem;
+}
+.dropdown .dropdown-menu{
+    position: absolute;
+    top: 100%;
+    left:-20em;
+    z-index: 1000;
+    width: 25em;
+}
+.dropdown-toggle {
+    background-color: #fff;
+    border:0;
+    padding: 10px;
+}
+.dropdown-toggle::after {
+    display: none;
+}
+.base-btn{
+    background:white;
+    border-radius: 1rem;
+}
+@media (max-width: 991px) {
+    .club-intro{
+        text-align: center;
+        margin-bottom: 10rem;
+    }
+}
+.club-intro>a{
+    color:#C2A661;
+}
+.club-intro>a:hover{
+    color:#887035;
+    text-decoration: none;
+}
+.tmall-select .card{
+    text-align: center;
+    position: relative;
+}
+.tmall-select .card>img{
+    position: absolute;
+    top:-2rem;
+    left:1rem;
+    width:75%;
+    height:40%;
+}
+.tmall-select .card-deck .card-body{
+    margin-top:2rem;
+}
+.tmall-select .card-deck .card-title{
+    font-size: 1rem;
+    font-weight: 700;
+}
+.tmall-select .card-deck .card-text{
+    font-size: 0.8rem;
+}
+.tmall-select .card-deck .card-link{
+    font-size: 0.5rem;
+    color:#C2A661;
+}
+.tmall-select .card-deck .card-link:hover{
+    color:#887035;
+}
+.lecture{
+    overflow: hidden;
+    position: relative;
+}
+.lecture .cards{
+    width:calc(250px*5);
+    position: relative;
+}
+.lecture .cards .card{
+    position: relative;
+    width:240px;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+.lecture .cards .card .card-title{
+    font-size: 1rem;
+    color:#000;
+}
+.lecture .cards .card a:hover{
+    text-decoration: none;
+}
+.lecture .cards .card .btn{
+    background:#C2A661 ;
+    color:#fff;
+    font-size: 0.8rem;
+    font-weight: 500;
+    position: absolute;
+    top:0.5rem;
+    left:0;
+}
+/*¿§·ÈÐÇ½²ÌÃ×óÓÒ¼ýÍ·*/
+.lecture>a{
+    background: #fff;
+    border:1px solid #eee;
+    box-shadow:0 0 3rem #eee ;
+    display: block;
+    width:1.5rem;
+    height:1.5rem;
+    border-radius: 50%;
+    position: absolute;
+    top:50%;
+}
+.lecture>a img{
+    position: relative;
+    top:-0.2rem;
+}
+.lecture>a.control-prev{
+    left:1rem;
+}
+.lecture>a.control-next{
+    right:1rem;
+}
+
+
+.card{
+    position: relative;
+    border-bottom:0.1rem solid #ccc;
+}

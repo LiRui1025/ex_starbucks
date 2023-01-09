@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,inital-scale:1"/>
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap-v4.0.0.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- 左边-->
+            <div class="left col-lg-4 col-sm-12 ">
+                <div class="">
+                <!-- 导航nav lg4 sm12-->
+                <nav class="navbar navbar-light bg-light">
+                    <!-- 前3项-->
+                    <ul class="navbar-nav mr-auto h7 text-dark font-weight-bold">
+                        <!-- logo-->
+                        <li  class="nav-item">
+                            <a class="navbar-brand" href="#">
+                                <img src="svg/logo.svg" class="d-inline-block align-top"  width="40px" height="40px">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">门店</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">我的账户</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">菜单</a>
+                        </li>
+                    </ul>
+                    <!-- 下拉菜单-->
+                    <div class="dropdown">
+                        <!-- 折叠三横线按钮-->
+                        <button class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div  class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">门店</a>
+                            <a class="dropdown-item" href="#">星享俱乐部</a>
+                            <a class="dropdown-item" href="#">菜单</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">星巴克移动应用</a>
+                            <a class="dropdown-item" href="#">星礼卡</a>
+                            <a class="dropdown-item" href="#">星巴克臻选<sub>TM</sub></a>
+                            <a class="dropdown-item" href="#">专星送<sub>TM</sub></a>
+                            <a class="dropdown-item" href="#">咖啡星讲堂</a>
+                            <a class="dropdown-item" href="#">上海烘焙工坊</a>
+                            <a class="dropdown-item" href="#">关于星巴克</a>
+                            <a class="dropdown-item" href="#">帮助中心</a>
+                        </div>
+                    </div>
+
+                </nav>
+                <div class="left-bootom text-center mb-3">
+                    <p class="h4 mb-3">心情惬意，来杯咖啡吧 ☕</p>
+                    <!-- 登录按钮-->
+                    <img src="svg/icon-account.svg" alt=""/>
+                    <a class="login-btn btn text-success">登录</a>
+                    <!-- 注册按钮-->
+                    <button class="base-btn btn border-success text-success pl-3 pr-3 ml-3">注册</button>
+                </div>
+                </div>
+            </div>
+            <!-- 主体 session lg8 sm=12 -->
+            <div class="col-lg-8 col-sm-12  border-left p-lg-0">
+                <!-- 轮播图-->
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="img/kv-cake-2.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/kv-cherry-blossom.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/kv-coffee-ice.jpg" alt="Third slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/kv-ice.jpg" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+                <!-- 三张活动图片-->
+                <div class="card-deck w-100 m-auto p-3 bg-light">
+                    <div class="card">
+                        <img class="card-img-top" src="./img/tmall-0312-cn.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="./img/starbucks-design-studio-web-china.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="./img/homepage-career-cn.jpg" alt="Card image cap">
+                    </div>
+                </div>
+                <!-- 星享俱乐部-->
+                <div class="row flex-row  p-5">
+                    <!-- 左简介-->
+                    <div class="club-intro flex-column col-lg-6 col-xs-12 mb-3 pl-5">
+                        <p class="h4">星享俱乐部</p>
+                        <span>开启您的星享之旅，星星越多、会员等级越高、好礼越丰富。</span>
+                        <a href="javascript:;" class="text-nowrap">了解更多></a>
+                        <div>
+                            <!-- 注册按钮-->
+                            <button class="base-btn btn border-success text-success pl-3 pr-3 m-3">注册</button>
+                            <!-- 登录按钮-->
+                            <button class="base-btn btn border-success text-success pl-3 pr-3 m-3">登录</button>
+                        </div>
+                    </div>
+                    <!-- 右图-->
+                    <div class="col-md-6 col-sm-12 m-auto text-center pl-5">
+                        <img class="" src="svg/logo-msr-new.svg" alt=""/>
+                    </div>
+                </div>
+                <!-- 星巴克精选-->
+                <div class="tmall-select bg-light  m-3 text-center">
+                    <p class="h4">星巴克精选</p>
+                    <p class="pt-2">在星巴克天猫旗舰店发现更多咖啡心意</p>
+                    <div class="card-deck mt-5">
+                        <!-- 第一个-->
+                        <div class="card">
+                            <img class="card-img-top" src="img/tmall-card-01.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">会员星礼包</h5>
+                                <p class="card-text">星享卡新升级</p>
+                                <p class="card-text">更多心意好礼</p>
+                                <a href="javascript:;" class="card-link">了解更多></a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top" src="img/tmall-card-02.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">星礼卡</h5>
+                                <p class="card-text">用一份心礼</p>
+                                <p class="card-text">让心意相随</p>
+                                <a href="javascript:;" class="card-link">了解更多></a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top" src="img/tmall-eticket.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">电子产品劵</h5>
+                                <p class="card-text">心意</p>
+                                <p class="card-text">从这一杯开始</p>
+                                <a href="javascript:;" class="card-link">了解更多></a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top" src="img/tmall-reserve.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">咖啡生活</h5>
+                                <p class="card-text">星巴克</p>
+                                <p class="card-text">用心制作</p>
+                                <a href="javascript:;" class="card-link">了解更多></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 咖啡星讲堂-->
+                <div id="lecture" class="lecture  p-3 bg-light text-center">
+                    <p class="h4">1912 派克街 | 咖啡星讲堂</p>
+                    <p class="pt-2">了解更多星巴克咖啡文化</p>
+                    <div class="cards d-flex flex-row ">
+                            <div class="card">
+                                <a href="" class="text-dark ">
+                                    <img class="card-img-top" src="img/pour-over-1.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">咖啡的起源和培植</h5>
+                                        <button class="btn">咖啡知识</button>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="card">
+                                <a href="" class="text-dark ">
+                                    <img class="card-img-top" src="img/pour-over-2.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">咖啡品鉴</h5>
+                                        <button class="btn">咖啡调制</button>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="card">
+                                <a href="" class="text-dark ">
+                                    <img class="card-img-top" src="img/pour-over-3.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">咖啡烘焙</h5>
+                                    <button class="btn">咖啡知识</button>
+                                </div>
+                                </a>
+                            </div>
+
+                        <div class="card">
+                            <a href="" class="text-dark ">
+                                <img class="card-img-top" src="img/pour-over-4.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">手冲咖啡</h5>
+                                    <button class="btn">咖啡品鉴</button>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="card">
+                            <a href="" class="text-dark">
+                                <img class="card-img-top" src="img/pour-over-5.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">咖啡品尝</h5>
+                                    <button class="btn">咖啡品鉴</button>
+                                </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+                    <a class="control-prev invisible" href="#lecture" role="button" data-slide="prev">
+                        <img src="svg/icon-scroll-left.svg" alt=""/>
+                    </a>
+                    <a class="control-next" href="#lecture" role="button" data-slide="next">
+                        <img src="svg/icon-scroll-right.svg" alt=""/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+$(document).ready(function() {
+  $('.carousel-home').slick({
+    lazyLoad: 'progressive',
+    autoplay: true,
+    cssEase: 'linear',
+    speed: 500,
+    autoplaySpeed: 5000,
+  })
+  $('.slick-active').find('span').addClass('animated');
+  $('.carousel-home').on('afterChange', function(event, slick, currentSlide) {
+    $('.slick-active').find('span').addClass('animated');
+    $('.slick-active').siblings('.slick-slide').find('span').removeClass('animated')
+  })
+
+  var $videoOverlay = $('#home-campaign-video-overlay')
+  var videoElement = $videoOverlay.find('video')[0]
+  $('#home-campaign-video').click(function(event) {
+    event.preventDefault()
+    $videoOverlay.addClass('active')
+    videoElement.play()
+  })
+  $videoOverlay.find('.close').click(function() {
+    videoElement.pause()
+  })
+  $(document).keydown(function(event) {
+    if (videoElement && event.keyCode == 27) { // esc
+      videoElement.pause()
+    }
+  })
+
+  $('.carousel-libra').slick({
+    lazyLoad: 'progressive',
+    autoplay: true,
+    cssEase: 'linear',
+    speed: 500,
+    autoplaySpeed: 5000,
+    dots: true,
+    prevArrow: $('.slick-prev'),
+    nextArrow: $('.slick-next')
+  })
+})

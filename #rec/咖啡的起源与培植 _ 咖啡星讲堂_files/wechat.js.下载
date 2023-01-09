@@ -1,0 +1,61 @@
+document.addEventListener('DOMContentLoaded', function () {
+  /* WECHAT SHARING */
+  var xhr = new XMLHttpRequest();
+  var hostname = location.origin;
+  var appId = /www.starbucks.com.cn$/i.test(hostname) ? 'wxaf48360fec8b1f0c' : 'wx186c10fc6a4ff63c';
+  var apiUrl = hostname + '/api/external/wechat/thirdParty/jssdkSignature';
+  xhr.open('POST', apiUrl, true);
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        var resData = JSON.parse(xhr.responseText);
+        var signature = resData.signature;
+        var nonceStr = resData.nonceStr;
+        var timestamp = resData.timestamp;
+        if (signature && nonceStr && timestamp && wx) {
+          wx.config({
+            debug: false,
+            appId: appId,
+            timestamp: timestamp,
+            nonceStr: nonceStr,
+            signature: signature,
+            jsApiList: [
+              'checkJsApi',
+              'onMenuShareTimeline',
+              'onMenuShareAppMessage'
+            ]
+          });
+          wx.ready(function () {
+            var pageShareData = {
+              title: WECHAT_TITLE,
+              desc: WECHAT_DESC,
+              link: location.href + '?utm_source=sbux%20blog&utm_medium=wechat',
+              imgUrl: hostname + WECHAT_IMAGE,
+              success: function (res) {
+                console.log('This page shared:', location.href);
+              },
+              cancel: function (res) {
+                console.log('Cancelled page sharing for:', location.href);
+              }
+            };
+            wx.onMenuShareTimeline(pageShareData);
+            wx.onMenuShareAppMessage(pageShareData);
+          });
+          wx.error(function (res) {
+            console.log('wechat jssdk error: ', res.errMsg);
+          });
+        }
+      } else {
+        console.log('Request to share api failed: ', xhr.status);
+      }
+    }
+  };
+  xhr.send({
+    data: {
+      url: location.href.split('#')[0],
+      appId: appId
+    }
+  });
+})
